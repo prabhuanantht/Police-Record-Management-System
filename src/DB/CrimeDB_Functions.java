@@ -12,7 +12,7 @@ public class CrimeDB_Functions {
 
 	//database connection initialization
 	public CrimeDB_Functions() throws ClassNotFoundException, SQLException {
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimeInvestigations","root","password");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimeInvestigations","root","taprabhu");
 		Class.forName("com.mysql.cj.jdbc.Driver");
 	}
 	
