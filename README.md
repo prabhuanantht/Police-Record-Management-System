@@ -51,7 +51,7 @@ The **Police Record Management System** is a comprehensive application designed 
     cd Police_Record_Management_System
     ```
 
-2. **Setup the Database Tables and Schema:**
+2. **Set up the Database Tables and Schema:**
   - Open the `db.sql` file located in the root directory.
   - Execute the SQL scripts in your MySQL database to create the necessary tables and insert initial data.
   - Update the **database credentials** in the application source code.
