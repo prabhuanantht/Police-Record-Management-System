@@ -18,9 +18,9 @@ import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import java.util.Objects;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
-public class NewOfficerRegistration {
+public class NewOfficerReg {
 
 	private JFrame frmNewOfficerRegistrstion;
 	private JTextField textField;
@@ -35,7 +35,7 @@ public class NewOfficerRegistration {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					NewOfficerRegistration window = new NewOfficerRegistration();
+					NewOfficerReg window = new NewOfficerReg();
 					window.frmNewOfficerRegistrstion.setVisible(true);
 					window.frmNewOfficerRegistrstion.setSize(1650,1080);
 					window.frmNewOfficerRegistrstion.setLocationRelativeTo(null);
@@ -46,13 +46,13 @@ public class NewOfficerRegistration {
 		});
 	}
 
-	public NewOfficerRegistration() throws ClassNotFoundException, SQLException {
+	public NewOfficerReg() throws ClassNotFoundException, SQLException {
 		initialize();
 	}
 
 	private void initialize() throws ClassNotFoundException, SQLException {
 		
-		CrimeDB_Functions db = new CrimeDB_Functions();
+		PoliceDB_Functions db = new PoliceDB_Functions();
 		
 		frmNewOfficerRegistrstion = new JFrame();
 		frmNewOfficerRegistrstion.getContentPane().setBackground(Color.WHITE);
@@ -94,7 +94,7 @@ public class NewOfficerRegistration {
 		lblAdminContact.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				AdminContact.main(null);
+				ContactAdmin.main(null);
 				frmNewOfficerRegistrstion.setVisible(false);
 			}
 		});

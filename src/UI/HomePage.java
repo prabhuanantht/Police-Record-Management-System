@@ -7,14 +7,14 @@ import java.awt.event.MouseEvent;
 import java.util.Objects;
 import javax.swing.*;
 
-public class Home {
+public class HomePage {
 
     private JFrame frmCrimeInvestigationhome;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
-                Home window = new Home();
+                HomePage window = new HomePage();
                 window.frmCrimeInvestigationhome.setVisible(true);
                 window.frmCrimeInvestigationhome.setSize(1650, 1080);
                 window.frmCrimeInvestigationhome.setLocationRelativeTo(null);
@@ -24,7 +24,7 @@ public class Home {
         });
     }
 
-    public Home() {
+    public HomePage() {
         initialize();
     }
 
@@ -69,7 +69,7 @@ public class Home {
         lblAdminContact.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                AdminContact.main(null);
+                ContactAdmin.main(null);
                 frmCrimeInvestigationhome.setVisible(false);
             }
         });
@@ -96,7 +96,7 @@ public class Home {
         lblNewOfficer.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                NewOfficerRegistration.main(null);
+                NewOfficerReg.main(null);
                 frmCrimeInvestigationhome.setVisible(false);
             }
         });

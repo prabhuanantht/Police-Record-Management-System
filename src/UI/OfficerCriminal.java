@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -30,7 +30,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
-public class OfficerCriminals {
+public class OfficerCriminal {
 
 	private JFrame frmCriminals;
 	private JTextField criminalId;
@@ -46,7 +46,7 @@ public class OfficerCriminals {
 	private JTextField height;
 	private JTextField weight;
 	private JTextField textField_12;
-	public CrimeDB_Functions db;
+	public PoliceDB_Functions db;
 	public static ResultSet rs;
 	public BufferedImage bn;
 
@@ -54,7 +54,7 @@ public class OfficerCriminals {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					OfficerCriminals window = new OfficerCriminals();
+					OfficerCriminal window = new OfficerCriminal();
 					window.frmCriminals.setVisible(true);
 					window.frmCriminals.setSize(1650,1080);
 					window.frmCriminals.setLocationRelativeTo(null);
@@ -65,12 +65,12 @@ public class OfficerCriminals {
 		});
 	}
 
-	public OfficerCriminals() throws ClassNotFoundException, SQLException {
+	public OfficerCriminal() throws ClassNotFoundException, SQLException {
 		initialize();
 	}
 
 	private void initialize() throws ClassNotFoundException, SQLException {
-		db = new CrimeDB_Functions();
+		db = new PoliceDB_Functions();
 		frmCriminals = new JFrame();
 		frmCriminals.getContentPane().setBackground(Color.WHITE);
 		frmCriminals.getContentPane().setLayout(null);
@@ -97,7 +97,7 @@ public class OfficerCriminals {
 		label_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				OfficerHome.main(null);
+				OfficerFir.main(null);
 				frmCriminals.setVisible(false);
 			}
 		});
@@ -117,7 +117,7 @@ public class OfficerCriminals {
 		label_3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Officercase.main(null);
+				OfficerCase.main(null);
 				frmCriminals.setVisible(false);
 			}
 		});
@@ -332,7 +332,7 @@ public class OfficerCriminals {
 				try {
 					rs = db.search_criminal(criminalId);
 					if(rs.next()) {
-						CriminalDisplay.main(null);
+						DisplayCriminal.main(null);
 						frmCriminals.setVisible(false);
 					}
 					else {
@@ -376,10 +376,14 @@ public class OfficerCriminals {
 				String Act = act.getText();
 				
 				try {
-					db = new CrimeDB_Functions();
+					db = new PoliceDB_Functions();
+					File dir = new File("/resources/criminals/");
+					if (!dir.exists()) {
+						dir.mkdirs(); // Create the directory if it doesn't exist
+					}
 					if(db.create_criminal(criminalID, Name, addres, City, status, Gender, wei, hei, dateA, dateR, dateB, bplace, occ, Act)) {
-						File outputfile = new File("./criminals/" + criminalId.getText() + ".jpg");
-						ImageIO.write(bn, "jpg", outputfile); 
+						File outputfile = new File("/resources/criminals/" + criminalId.getText() + ".png");
+						ImageIO.write(bn, "jpg", outputfile);
 						JOptionPane.showMessageDialog(frmCriminals , "Criminal added successfully!");
 					}
 				} catch (ClassNotFoundException | SQLException e1) {

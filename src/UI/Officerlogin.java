@@ -1,5 +1,4 @@
 package UI;
-import UI.NewOfficerRegistration;
 
 import java.awt.Color;
 import java.awt.EventQueue;
@@ -13,7 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -50,7 +49,7 @@ public class Officerlogin {
 
 	private void initialize() throws ClassNotFoundException, SQLException {
 		frmOfficerLogin = new JFrame();
-		CrimeDB_Functions db = new CrimeDB_Functions();
+		PoliceDB_Functions db = new PoliceDB_Functions();
 		
 		frmOfficerLogin.getContentPane().setBackground(Color.WHITE);
 		frmOfficerLogin.getContentPane().setLayout(null);
@@ -84,7 +83,7 @@ public class Officerlogin {
 		lblAdminContact.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				AdminContact.main(null);
+				ContactAdmin.main(null);
 				frmOfficerLogin.setVisible(false);
 
 				
@@ -114,7 +113,7 @@ public class Officerlogin {
 		lblNewOfficer.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				NewOfficerRegistration.main(null);
+				NewOfficerReg.main(null);
 				frmOfficerLogin.setVisible(false);
 			}
 		});
@@ -180,7 +179,7 @@ public class Officerlogin {
 				
 				try {
 					if(db.police_officer_login(username, password)) {
-						OfficerHome.main(null);
+						OfficerFir.main(null);
 						frmOfficerLogin.setVisible(false);
 					}
 					else {

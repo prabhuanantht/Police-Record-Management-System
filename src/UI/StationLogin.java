@@ -1,34 +1,28 @@
 package UI;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
-import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Insets;
 
-import javax.swing.SpringLayout;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import java.util.Objects;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
 public class StationLogin extends JFrame {
 
@@ -53,7 +47,7 @@ public class StationLogin extends JFrame {
 
 	public StationLogin() throws ClassNotFoundException, SQLException {
 
-		CrimeDB_Functions db = new CrimeDB_Functions();
+		PoliceDB_Functions db = new PoliceDB_Functions();
 
 		setBackground(Color.WHITE);
 		setFont(new Font("Chandas", Font.BOLD, 14));
@@ -101,7 +95,7 @@ public class StationLogin extends JFrame {
 
 				try {
 					if(db.police_station_login(username, password)) {
-						Home.main(null);
+						HomePage.main(null);
 						frame.setVisible(false);
 						contentPane.setVisible(false);
 					}

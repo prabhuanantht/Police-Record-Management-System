@@ -1,6 +1,5 @@
 package UI;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -11,10 +10,9 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 import DB.PrinterTask;
 
-import java.awt.SystemColor;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -23,7 +21,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.print.PrinterException;
 
-public class CaseDisplay extends JFrame {
+public class DisplayCase extends JFrame {
 
 	private JPanel contentPane;
 
@@ -31,7 +29,7 @@ public class CaseDisplay extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CaseDisplay frame = new CaseDisplay();
+					DisplayCase frame = new DisplayCase();
 					frame.setVisible(true);
 					frame.setSize(700,800);
 					frame.setLocationRelativeTo(null);
@@ -42,7 +40,7 @@ public class CaseDisplay extends JFrame {
 		});
 	}
 
-	public CaseDisplay() {
+	public DisplayCase() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 612, 696);
 		contentPane = new JPanel();
@@ -68,7 +66,7 @@ public class CaseDisplay extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				contentPane.setVisible(false);
-				Officercase.main(null);
+				OfficerCase.main(null);
 			}
 		});
 		button.setBackground(new Color(255, 255, 240));
@@ -165,7 +163,7 @@ public class CaseDisplay extends JFrame {
 		caseId.setBounds(127, 74, 150, 14);
 		printPanel.add(caseId);
 		
-		ResultSet rs = Officercase.rs;
+		ResultSet rs = OfficerCase.rs;
 		try {
 			caseId.setText(rs.getString("caseId"));
 			place.setText(rs.getString("place"));
@@ -183,11 +181,11 @@ public class CaseDisplay extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-					CrimeDB_Functions db = new CrimeDB_Functions();
+					PoliceDB_Functions db = new PoliceDB_Functions();
 					db.delete_case(caseId.getText());
 					JOptionPane.showMessageDialog(contentPane , "Case deleted successfully!");
 					contentPane.setVisible(false);
-					Officercase.main(null);
+					OfficerCase.main(null);
 				} catch (ClassNotFoundException e1) {
 					e1.printStackTrace();
 				} catch (SQLException e1) {

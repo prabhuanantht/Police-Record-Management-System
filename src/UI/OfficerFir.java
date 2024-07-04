@@ -1,9 +1,5 @@
 package UI;
 
-import UI.OfficerCriminals;
-import UI.Officercase;
-import UI.Officerlogin;
-
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -11,22 +7,16 @@ import java.awt.Image;
 
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
-import javax.swing.border.BevelBorder;
-import java.awt.FlowLayout;
-import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.awt.List;
-import java.awt.TextArea;
 import java.util.Objects;
 
-public class OfficerHome {
+public class OfficerFir {
 
 	private JFrame frmOfficerHome;
 	private JTextField policeStationName;
@@ -44,7 +34,7 @@ public class OfficerHome {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					OfficerHome window = new OfficerHome();
+					OfficerFir window = new OfficerFir();
 					window.frmOfficerHome.setVisible(true);
 					window.frmOfficerHome.setSize(1650,1080);
 					window.frmOfficerHome.setLocationRelativeTo(null);
@@ -55,12 +45,12 @@ public class OfficerHome {
 		});
 	}
 
-	public OfficerHome() throws ClassNotFoundException, SQLException {
+	public OfficerFir() throws ClassNotFoundException, SQLException {
 		initialize();
 	}
 
 	private void initialize() throws ClassNotFoundException, SQLException {
-		CrimeDB_Functions db = new CrimeDB_Functions();
+		PoliceDB_Functions db = new PoliceDB_Functions();
 		frmOfficerHome = new JFrame();
 		
 		frmOfficerHome.getContentPane().setBackground(Color.WHITE);
@@ -95,7 +85,7 @@ public class OfficerHome {
 		lblCriminals.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-			OfficerCriminals.main(null);
+			OfficerCriminal.main(null);
 			frmOfficerHome.setVisible(false);
 			}
 		});
@@ -108,7 +98,7 @@ public class OfficerHome {
 		lblCases.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				Officercase.main(null);
+				OfficerCase.main(null);
 				frmOfficerHome.setVisible(false);
 			}
 		});
@@ -349,7 +339,7 @@ public class OfficerHome {
 						JOptionPane.showMessageDialog(frmOfficerHome, "FIR not found");
 					}else {
 						frmOfficerHome.setVisible(false);
-						FIRdisplay.main(null);
+						DisplayFIR.main(null);
 					}
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block

@@ -17,20 +17,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.imageio.ImageIO;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDesktopPane;
-import javax.swing.JTextField;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 import DB.PrinterTask;
 
-import javax.swing.JComboBox;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class CriminalDisplay {
+public class DisplayCriminal {
 
 	private JFrame frame;
 
@@ -38,7 +34,7 @@ public class CriminalDisplay {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					CriminalDisplay window = new CriminalDisplay();
+					DisplayCriminal window = new DisplayCriminal();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -48,7 +44,7 @@ public class CriminalDisplay {
 	}
 
 
-	public CriminalDisplay() {
+	public DisplayCriminal() {
 		initialize();
 	}
 
@@ -223,7 +219,7 @@ public class CriminalDisplay {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				OfficerCriminals.main(null);
+				OfficerCriminal.main(null);
 			}
 		});
 		button.setBackground(new Color(255, 255, 240));
@@ -255,11 +251,11 @@ public class CriminalDisplay {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-					CrimeDB_Functions db = new CrimeDB_Functions();
+					PoliceDB_Functions db = new PoliceDB_Functions();
 					if(db.delete_criminal(criminalId.getText()))
 						JOptionPane.showMessageDialog(frame, "Report deleted successfuly!");
 					frame.setVisible(false);
-					OfficerCriminals.main(null);
+					OfficerCriminal.main(null);
 				} catch (ClassNotFoundException | SQLException e1) {
 					JOptionPane.showMessageDialog(frame, "Error deleting the report");
 					e1.printStackTrace();
@@ -272,7 +268,7 @@ public class CriminalDisplay {
 		button_2.setBounds(465, 604, 117, 25);
 		frame.getContentPane().add(button_2);
 		
-		ResultSet rs = OfficerCriminals.rs;
+		ResultSet rs = OfficerCriminal.rs;
 		try {
 			criminalId.setText(rs.getString("criminalId"));
 			name.setText(rs.getString("name"));
@@ -289,7 +285,7 @@ public class CriminalDisplay {
 			occupation.setText(rs.getString("occupation"));
 			act.setText(rs.getString("act"));
 			
-			File file = new File("./criminals/" + rs.getString("criminalId") + ".jpg");
+			File file = new File("/resources/criminals/" + rs.getString("criminalId") + ".png");
 			BufferedImage bi = ImageIO.read(file);
 			image.setIcon(new ImageIcon(bi));
 		} catch (SQLException | IOException e) {

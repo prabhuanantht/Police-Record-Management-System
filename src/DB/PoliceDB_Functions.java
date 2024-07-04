@@ -1,17 +1,16 @@
 package DB;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CrimeDB_Functions {
+public class PoliceDB_Functions {
 	public static Connection con = null;
 
 	//database connection initialization
-	public CrimeDB_Functions() throws ClassNotFoundException, SQLException {
+	public PoliceDB_Functions() throws ClassNotFoundException, SQLException {
 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimeInvestigations","root","taprabhu");
 		Class.forName("com.mysql.cj.jdbc.Driver");
 	}
@@ -42,7 +41,7 @@ public class CrimeDB_Functions {
 			if(pass.equals(password)) //checking for equality
 				valid = true; 	//allow the user to login
 		}
-		
+
 		return valid; //return login status
 	}
 	
@@ -53,7 +52,7 @@ public class CrimeDB_Functions {
 		
 		PreparedStatement login = con.prepareStatement("Select password from police_officer where username = ?");
 		login.setString(1, username);
-		
+
 		ResultSet rs=login.executeQuery();
 		if(rs.next()) {
 			String pass=rs.getString("password"); //fetching password from the database

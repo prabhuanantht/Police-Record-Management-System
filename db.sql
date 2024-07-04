@@ -71,4 +71,3 @@ CREATE TABLE CrimeInvestigations.criminal
 	occupation VARCHAR(255),
 	act VARCHAR(255)
 );
-	

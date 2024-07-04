@@ -1,13 +1,12 @@
 package UI;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 import DB.PrinterTask;
 
 import javax.swing.JLabel;
@@ -21,9 +20,8 @@ import java.awt.event.MouseEvent;
 import java.awt.print.PrinterException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.awt.SystemColor;
 
-public class FIRdisplay extends JFrame {
+public class DisplayFIR extends JFrame {
 
 	private JPanel contentPane;
 
@@ -31,7 +29,7 @@ public class FIRdisplay extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					FIRdisplay frame = new FIRdisplay();
+					DisplayFIR frame = new DisplayFIR();
 					frame.setVisible(true);
 					frame.setSize(700,800);
 					frame.setLocationRelativeTo(null);
@@ -42,7 +40,7 @@ public class FIRdisplay extends JFrame {
 		});
 	}
 
-	public FIRdisplay() {
+	public DisplayFIR() {
 		setTitle("FIR Found");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 10, 10);
@@ -90,7 +88,7 @@ public class FIRdisplay extends JFrame {
 		btnBackSearch.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				OfficerHome.main(null);
+				OfficerFir.main(null);
 				contentPane.setVisible(false);
 				
 			}
@@ -225,7 +223,7 @@ public class FIRdisplay extends JFrame {
 		panel_2.add(label_22);
 		
 		
-		ResultSet rs = OfficerHome.rs;
+		ResultSet rs = OfficerFir.rs;
 		try {
 			firid.setText(rs.getString("firId"));
 			policestationName.setText(rs.getString("policeStationName"));
@@ -247,11 +245,11 @@ public class FIRdisplay extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-					CrimeDB_Functions db = new CrimeDB_Functions();
+					PoliceDB_Functions db = new PoliceDB_Functions();
 					db.delete_fir(firid.getText());
 					JOptionPane.showMessageDialog(contentPane , "FIR deleted successfully!");
 					contentPane.setVisible(false);
-					OfficerHome.main(null);
+					OfficerFir.main(null);
 				} catch (ClassNotFoundException e1) {
 					e1.printStackTrace();
 				} catch (SQLException e1) {

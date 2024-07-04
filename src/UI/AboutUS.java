@@ -76,7 +76,7 @@ public class AboutUS {
 		lblAdminContact.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				AdminContact.main(null);
+				ContactAdmin.main(null);
 				frmAboutUs.setVisible(false);
 
 			}
@@ -97,7 +97,7 @@ public class AboutUS {
 		lblNewOfficer.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				NewOfficerRegistration.main(null);
+				NewOfficerReg.main(null);
 				frmAboutUs.setVisible(false);
 
 			}
@@ -146,7 +146,7 @@ public class AboutUS {
 						+ "Contact Us: poilce@karnataka.gov.in\n\n"
 						+ "Privacy and Security:\n"
 						+ "We are committed to protecting the privacy and security of all law enforcement data stored within our system. Our practices adhere to industry standards and regulations to ensure the highest level of data protection.\n\n"
-						+ "Development Team:\nAnanth(4NI22IS019), \tAyush(4NI22IS044), \tChandan(4NI22IS040), \tChetan(4NI22IS044), \tAman(4NI22IS017)\n\n"
+						+ "Development Team:\nAnanth(4NI22IS019), \tChandan(4NI22IS040), \tChetan(4NI22IS044), \tAman(4NI22IS017)\n\n"
 						+ "Our application is developed by a dedicated team of students of Information Science department at The National Institute Of Engineering, Mysore, passionate about leveraging technology to empower law enforcement agencies in their mission to serve and protect communities."
 		);
 		aboutText.setEditable(false);

@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 
-import DB.CrimeDB_Functions;
+import DB.PoliceDB_Functions;
 
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
@@ -26,7 +26,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Objects;
 
-public class Officercase {
+public class OfficerCase {
 
 	private JFrame frmOfficerCase;
 	private JTextField textField;
@@ -42,7 +42,7 @@ public class Officercase {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Officercase window = new Officercase();
+					OfficerCase window = new OfficerCase();
 					
 					window.frmOfficerCase.setVisible(true);
 					window.frmOfficerCase.setVisible(true);
@@ -55,13 +55,13 @@ public class Officercase {
 		});
 	}
 
-	public Officercase() throws ClassNotFoundException, SQLException {
+	public OfficerCase() throws ClassNotFoundException, SQLException {
 		initialize();
 	}
 
 	private void initialize() throws ClassNotFoundException, SQLException {
 		
-		CrimeDB_Functions db = new CrimeDB_Functions();
+		PoliceDB_Functions db = new PoliceDB_Functions();
 		
 		frmOfficerCase = new JFrame();
 		frmOfficerCase.getContentPane().setBackground(Color.WHITE);
@@ -89,7 +89,7 @@ public class Officercase {
 		lblOfficerLogin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				OfficerHome.main(null);
+				OfficerFir.main(null);
 				frmOfficerCase.setVisible(false);
 				
 			}
@@ -118,7 +118,7 @@ public class Officercase {
 		lblNewOfficer.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				OfficerCriminals.main(null);
+				OfficerCriminal.main(null);
 				frmOfficerCase.setVisible(false);
 
 				
@@ -299,7 +299,7 @@ public class Officercase {
 						rs.first();
 					}else {
 						frmOfficerCase.setVisible(false);
-						CaseDisplay.main(null);
+						DisplayCase.main(null);
 					}
 				} catch (SQLException e) {
 					JOptionPane.showMessageDialog(frmOfficerCase.getContentPane() , "Error: Case not found!");

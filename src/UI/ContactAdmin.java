@@ -11,10 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Objects;
 
-import static UI.StationLogin.frame;
-import static jdk.xml.internal.SecuritySupport.getClassLoader;
-
-public class AdminContact {
+public class ContactAdmin {
 
 	private JFrame frmAdminContact;
 
@@ -22,7 +19,7 @@ public class AdminContact {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					AdminContact window = new AdminContact();
+					ContactAdmin window = new ContactAdmin();
 					window.frmAdminContact.setVisible(true);
 					window.frmAdminContact.setSize(1650,1080);
 					window.frmAdminContact.setLocationRelativeTo(null);
@@ -32,7 +29,7 @@ public class AdminContact {
 			}
 		});
 	}
-	public AdminContact() {
+	public ContactAdmin() {
 		initialize();
 	}
 
@@ -99,7 +96,7 @@ public class AdminContact {
 		lblNewOfficer.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				NewOfficerRegistration.main(null);
+				NewOfficerReg.main(null);
 				frmAdminContact.setVisible(false);
 			}
 		});
