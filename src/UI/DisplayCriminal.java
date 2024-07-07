@@ -56,7 +56,7 @@ public class DisplayCriminal {
 		
 		JPanel panel = new JPanel();
 		panel.setLayout(null);
-		panel.setBackground(new Color(0, 0, 128));
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, 0, 726, 66);
 		frame.getContentPane().add(panel);
 		
@@ -76,13 +76,13 @@ public class DisplayCriminal {
 		printPanel.add(lblCriminalReport);
 		lblCriminalReport.setForeground(Color.WHITE);
 		lblCriminalReport.setFont(new Font("Dialog", Font.BOLD, 19));
-		lblCriminalReport.setBackground(new Color(0, 0, 128));
+		lblCriminalReport.setBackground(Color.BLACK);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(10, 11, 294, 45);
 		printPanel.add(panel_1);
 		panel_1.setLayout(null);
-		panel_1.setBackground(new Color(0, 0, 128));
+		panel_1.setBackground(Color.BLACK);
 		
 		JLabel label_1 = new JLabel("* Criminal ID");
 		label_1.setFont(new Font("Dialog", Font.BOLD, 13));
@@ -224,7 +224,7 @@ public class DisplayCriminal {
 		});
 		button.setBackground(new Color(255, 255, 240));
 		button.setFont(new Font("Dialog", Font.BOLD, 13));
-		button.setForeground(new Color(0, 0, 139));
+		button.setForeground(Color.BLACK);
 		button.setBounds(144, 603, 117, 25);
 		frame.getContentPane().add(button);
 		
@@ -242,7 +242,7 @@ public class DisplayCriminal {
 		});
 		button_1.setBackground(new Color(255, 255, 240));
 		button_1.setFont(new Font("Dialog", Font.BOLD, 13));
-		button_1.setForeground(new Color(0, 0, 139));
+		button_1.setForeground(Color.BLACK);
 		button_1.setBounds(315, 603, 117, 25);
 		frame.getContentPane().add(button_1);
 		
@@ -264,7 +264,7 @@ public class DisplayCriminal {
 			}
 		});
 		button_2.setBackground(Color.WHITE);
-		button_2.setForeground(new Color(0, 0, 139));
+		button_2.setForeground(Color.BLACK);
 		button_2.setBounds(465, 604, 117, 25);
 		frame.getContentPane().add(button_2);
 		

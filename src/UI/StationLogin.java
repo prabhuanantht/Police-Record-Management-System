@@ -61,7 +61,7 @@ public class StationLogin extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Police Station Login");
-		lblNewLabel.setForeground(new Color(0, 0, 128));
+		lblNewLabel.setBackground(Color.BLACK);;
 		lblNewLabel.setBounds(227, 12, 196, 29);
 		lblNewLabel.setFont(new Font("Chilanka", Font.BOLD, 17));
 		contentPane.add(lblNewLabel);
@@ -110,7 +110,7 @@ public class StationLogin extends JFrame {
 		});
 		btnLogin.setBounds(374, 198, 73, 25);
 //		btnLogin.setBorder(new RoundedBorder(15));
-		btnLogin.setBackground(new Color(102, 163, 255));
+//		btnLogin.setBackground(Color.BLACK);
 		btnLogin.setForeground(Color.BLACK);
 		contentPane.add(btnLogin);
 

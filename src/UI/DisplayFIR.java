@@ -50,7 +50,7 @@ public class DisplayFIR extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(0, 0, 128));
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(-26, -24, 726, 66);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -78,7 +78,7 @@ public class DisplayFIR extends JFrame {
 				}
 			}
 		});
-		btnNewButton.setForeground(new Color(0, 0, 139));
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setBackground(new Color(255, 255, 240));
 		btnNewButton.setFont(new Font("Chilanka", Font.BOLD, 13));
 		btnNewButton.setBounds(290, 471, 117, 25);
@@ -95,66 +95,66 @@ public class DisplayFIR extends JFrame {
 		});
 		btnBackSearch.setBackground(new Color(255, 255, 240));
 		btnBackSearch.setFont(new Font("Chilanka", Font.BOLD, 13));
-		btnBackSearch.setForeground(new Color(0, 0, 139));
+		btnBackSearch.setForeground(Color.BLACK);
 		btnBackSearch.setBounds(137, 469, 117, 25);
 		contentPane.add(btnBackSearch);
 		
 		JLabel label = new JLabel("* FIR ID");
-		label.setForeground(new Color(0, 0, 128));
+		label.setBackground(Color.BLACK);;
 		label.setFont(new Font("Dialog", Font.BOLD, 13));
 		label.setBounds(401, 71, 70, 15);
 		printPanel.add(label);
 		
 		JLabel label_1 = new JLabel("* Police Station Name ");
-		label_1.setForeground(new Color(0, 0, 128));
+		label_1.setBackground(Color.BLACK);;
 		label_1.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_1.setBounds(10, 68, 174, 21);
 		printPanel.add(label_1);
 		
 		JLabel label_2 = new JLabel("* Subject");
-		label_2.setForeground(new Color(0, 0, 128));
+		label_2.setBackground(Color.BLACK);;
 		label_2.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_2.setBounds(10, 169, 80, 15);
 		printPanel.add(label_2);
 		
 		JLabel label_3 = new JLabel("* Complaint under ACT");
-		label_3.setForeground(new Color(0, 0, 128));
+		label_3.setBackground(Color.BLACK);;
 		label_3.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_3.setBounds(10, 136, 174, 15);
 		printPanel.add(label_3);
 		
 		JLabel label_4 = new JLabel("* Name ");
-		label_4.setForeground(new Color(0, 0, 128));
+		label_4.setBackground(Color.BLACK);;
 		label_4.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_4.setBounds(10, 109, 70, 15);
 		printPanel.add(label_4);
 		
 		JLabel label_5 = new JLabel("* Address");
-		label_5.setForeground(new Color(0, 0, 128));
+		label_5.setBackground(Color.BLACK);;
 		label_5.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_5.setBounds(10, 208, 154, 15);
 		printPanel.add(label_5);
 		
 		JLabel label_6 = new JLabel("* Date");
-		label_6.setForeground(new Color(0, 0, 128));
+		label_6.setBackground(Color.BLACK);;
 		label_6.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_6.setBounds(10, 249, 126, 15);
 		printPanel.add(label_6);
 		
 		JLabel label_7 = new JLabel("* Phone");
-		label_7.setForeground(new Color(0, 0, 128));
+		label_7.setBackground(Color.BLACK);;
 		label_7.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_7.setBounds(401, 249, 70, 15);
 		printPanel.add(label_7);
 		
 		JLabel label_8 = new JLabel("* Email ");
-		label_8.setForeground(new Color(0, 0, 128));
+		label_8.setBackground(Color.BLACK);;
 		label_8.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_8.setBounds(10, 296, 70, 15);
 		printPanel.add(label_8);
 		
 		JLabel label_9 = new JLabel("* Details");
-		label_9.setForeground(new Color(0, 0, 128));
+		label_9.setBackground(Color.BLACK);;
 		label_9.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_9.setBounds(10, 336, 70, 15);
 		printPanel.add(label_9);
@@ -200,7 +200,7 @@ public class DisplayFIR extends JFrame {
 		printPanel.add(firid);
 		
 		JLabel label_20 = new JLabel("* City Area");
-		label_20.setForeground(new Color(0, 0, 128));
+		label_20.setBackground(Color.BLACK);;
 		label_20.setFont(new Font("Dialog", Font.BOLD, 13));
 		label_20.setBounds(401, 20, 70, 15);
 		printPanel.add(label_20);
@@ -211,14 +211,14 @@ public class DisplayFIR extends JFrame {
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(null);
-		panel_2.setBackground(new Color(0, 0, 128));
+		panel_2.setBackground(Color.BLACK);
 		panel_2.setBounds(10, 11, 294, 45);
 		printPanel.add(panel_2);
 		
 		JLabel label_22 = new JLabel("    First Information Report");
 		label_22.setForeground(Color.WHITE);
 		label_22.setFont(new Font("Dialog", Font.BOLD, 19));
-		label_22.setBackground(new Color(0, 0, 128));
+		label_22.setBackground(Color.BLACK);
 		label_22.setBounds(0, 0, 322, 45);
 		panel_2.add(label_22);
 		
@@ -258,7 +258,7 @@ public class DisplayFIR extends JFrame {
 				}
 			}
 		});
-		btnNewButton_2.setForeground(new Color(0, 0, 139));
+		btnNewButton_2.setForeground(Color.BLACK);
 		btnNewButton_2.setBackground(new Color(255, 255, 255));
 		btnNewButton_2.setBounds(436, 469, 117, 25);
 		contentPane.add(btnNewButton_2);

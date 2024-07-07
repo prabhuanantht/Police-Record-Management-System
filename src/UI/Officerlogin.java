@@ -55,7 +55,7 @@ public class Officerlogin {
 		frmOfficerLogin.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);;
 		panel.setBounds(0, -105, 300, 1080);
 		frmOfficerLogin.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -192,7 +192,7 @@ public class Officerlogin {
 			}
 		});
 		btnLogin.setBackground(new Color(255, 255, 255));
-		btnLogin.setForeground(new Color(0, 0, 128));
+		btnLogin.setBackground(Color.BLACK);;
 		btnLogin.setBounds(678, 282, 117, 25);
 		frmOfficerLogin.getContentPane().add(btnLogin);
 		

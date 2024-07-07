@@ -50,7 +50,7 @@ public class DisplayCase extends JFrame {
 		
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(0, 0, 128));
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(-26, -24, 726, 66);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -71,7 +71,7 @@ public class DisplayCase extends JFrame {
 		});
 		button.setBackground(new Color(255, 255, 240));
 		button.setFont(new Font("Chilanka", Font.BOLD, 13));
-		button.setForeground(new Color(0, 0, 139));
+		button.setForeground(Color.BLACK);
 		button.setBounds(162, 396, 117, 25);
 		contentPane.add(button);
 		
@@ -82,14 +82,14 @@ public class DisplayCase extends JFrame {
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setLayout(null);
-		panel_2.setBackground(new Color(0, 0, 128));
+		panel_2.setBackground(Color.BLACK);
 		panel_2.setBounds(0, 0, 236, 45);
 		printPanel.add(panel_2);
 		
 		JLabel label = new JLabel("        CASE REPORT");
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("Dialog", Font.BOLD, 19));
-		label.setBackground(new Color(0, 0, 128));
+		label.setBackground(Color.BLACK);
 		label.setBounds(0, 0, 244, 45);
 		panel_2.add(label);
 		
@@ -196,7 +196,7 @@ public class DisplayCase extends JFrame {
 			}
 		});
 		button_2.setBackground(Color.WHITE);
-		button_2.setForeground(new Color(0, 0, 139));
+		button_2.setForeground(Color.BLACK);
 		button_2.setBounds(483, 394, 117, 25);
 		contentPane.add(button_2);
 		
@@ -215,7 +215,7 @@ public class DisplayCase extends JFrame {
 		});
 		button_1.setBackground(new Color(255, 255, 240));
 		button_1.setFont(new Font("Chilanka", Font.BOLD, 13));
-		button_1.setForeground(new Color(0, 0, 139));
+		button_1.setForeground(Color.BLACK);
 		button_1.setBounds(332, 394, 117, 25);
 		contentPane.add(button_1);
 		

@@ -40,7 +40,7 @@ public class AboutUS {
 		frmAboutUs.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, -105, 300, 1080);
 		frmAboutUs.getContentPane().add(panel);
 		panel.setLayout(null);

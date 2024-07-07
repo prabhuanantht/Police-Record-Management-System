@@ -40,7 +40,7 @@ public class ContactAdmin {
 		frmAdminContact.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, -105, 300, 1080);
 		frmAdminContact.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -129,13 +129,13 @@ public class ContactAdmin {
         frmAdminContact.getContentPane().add(lblNewLabel);
 		
 		JLabel lblHeyUser = new JLabel("Hey User, We are happy to receive any kind of suggestions from you...");
-		lblHeyUser.setForeground(new Color(25, 25, 112));
+		lblHeyUser.setForeground(Color.BLACK);
 		lblHeyUser.setFont(new Font("Chilanka", Font.BOLD, 14));
 		lblHeyUser.setBounds(350, 277, 515, 24);
 		frmAdminContact.getContentPane().add(lblHeyUser);
 		
 		JLabel lblNewLabel_1 = new JLabel("* NOTE :- Provide the problem what you have faced or any suggestions for improvement .");
-		lblNewLabel_1.setForeground(new Color(25, 25, 112));
+		lblNewLabel_1.setForeground(Color.BLACK);
 		lblNewLabel_1.setFont(new Font("Chilanka", Font.BOLD, 14));
 		lblNewLabel_1.setBounds(350, 313, 887, 15);
 		frmAdminContact.getContentPane().add(lblNewLabel_1);
@@ -146,14 +146,14 @@ public class ContactAdmin {
 		frmAdminContact.getContentPane().add(lblEnterYourMessage);
 		
 		JTextArea textArea = new JTextArea();
-		Border coloredBorder = BorderFactory.createLineBorder(Color.BLUE, 1);
+		Border coloredBorder = BorderFactory.createLineBorder(Color.BLACK, 1);
 		textArea.setBorder(coloredBorder);
 		textArea.setBounds(528, 349, 386, 155);
 		frmAdminContact.getContentPane().add(textArea);
 
 		JButton btnSend = new JButton("Send ");
 		btnSend.setBackground(new Color(255, 255, 255));
-		btnSend.setForeground(new Color(0, 0, 128));
+		btnSend.setBackground(Color.BLACK);;
 		btnSend.setBounds(521, 516, 117, 25);
 		frmAdminContact.getContentPane().add(btnSend);
 		

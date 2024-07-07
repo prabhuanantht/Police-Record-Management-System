@@ -59,7 +59,7 @@ public class NewOfficerReg {
 		frmNewOfficerRegistrstion.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);;
 		panel.setBounds(0, -105, 300, 1080);
 		frmNewOfficerRegistrstion.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -147,7 +147,7 @@ public class NewOfficerReg {
         frmNewOfficerRegistrstion.getContentPane().add(lblNewLabel);
 		
 		JLabel lblCreateNewRegistration = new JLabel("New Registration ");
-		lblCreateNewRegistration.setForeground(new Color(0, 0, 205));
+		lblCreateNewRegistration.setForeground(Color.BLACK);
 		lblCreateNewRegistration.setFont(new Font("Chilanka", Font.BOLD, 17));
 		lblCreateNewRegistration.setBounds(653, 139, 245, 43);
 		frmNewOfficerRegistrstion.getContentPane().add(lblCreateNewRegistration);
@@ -241,7 +241,7 @@ public class NewOfficerReg {
 		});
 		btnSignUp.setFont(new Font("Chilanka", Font.BOLD, 13));
 		btnSignUp.setBackground(new Color(255, 255, 255));
-		btnSignUp.setForeground(new Color(0, 0, 128));
+		btnSignUp.setBackground(Color.BLACK);;
 		btnSignUp.setBounds(648, 416, 117, 25);
 		frmNewOfficerRegistrstion.getContentPane().add(btnSignUp);
 		

@@ -68,7 +68,7 @@ public class OfficerCase {
 		frmOfficerCase.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);;
 		panel.setBounds(0, -105, 300, 1080);
 		frmOfficerCase.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -262,7 +262,7 @@ public class OfficerCase {
 				}
 			}
 		});
-		btnSubmit.setForeground(Color.BLUE);
+		btnSubmit.setForeground(Color.BLACK);
 		btnSubmit.setBackground(Color.WHITE);
 		btnSubmit.setFont(new Font("Chilanka", Font.BOLD, 13));
 		btnSubmit.setBounds(276, 347, 117, 25);
@@ -273,7 +273,7 @@ public class OfficerCase {
 		
 		JLabel lblHelloUser = new JLabel("* Hello user you can now search cases with CASE-ID.");
 		lblHelloUser.setFont(new Font("Chilanka", Font.BOLD, 13));
-		lblHelloUser.setForeground(Color.GREEN);
+		lblHelloUser.setForeground(Color.WHITE);
 		lblHelloUser.setBounds(277, 93, 524, 15);
 		desktopPane_1.add(lblHelloUser);
 		
@@ -308,7 +308,7 @@ public class OfficerCase {
 			}
 		});
 		btnSearch.setBackground(Color.WHITE);
-		btnSearch.setForeground(Color.BLUE);
+		btnSearch.setForeground(Color.BLACK);
 		btnSearch.setFont(new Font("Chilanka", Font.BOLD, 13));
 		btnSearch.setBounds(487, 176, 117, 25);
 		desktopPane_1.add(btnSearch);

@@ -57,7 +57,7 @@ public class OfficerFir {
 		frmOfficerHome.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);;
 		panel.setBounds(0, -118, 300, 1080);
 		frmOfficerHome.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -312,8 +312,8 @@ public class OfficerFir {
 		tabbedPane.addTab("Search FIR", null, desktopPane_1, null);
 
 		JLabel lblHelloUser = new JLabel("* Hello user You can search FIR stored among the Database .");
-		lblHelloUser.setForeground(Color.GREEN);
-		lblHelloUser.setBackground(Color.GREEN);
+		lblHelloUser.setForeground(Color.WHITE);
+		lblHelloUser.setBackground(Color.WHITE);
 		lblHelloUser.setFont(new Font("Chilanka", Font.BOLD, 14));
 		lblHelloUser.setBounds(48, 80, 517, 15);
 		desktopPane_1.add(lblHelloUser);
@@ -349,12 +349,12 @@ public class OfficerFir {
 			}
 		});
 		btnNewButton.setBackground(Color.WHITE);
-		btnNewButton.setForeground(Color.BLUE);
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setBounds(416, 122, 117, 25);
 		desktopPane_1.add(btnNewButton);
 
 		JLabel lblOr = new JLabel("OR");
-		lblOr.setForeground(Color.GREEN);
+		lblOr.setForeground(Color.WHITE);
 		lblOr.setFont(new Font("FreeSerif", Font.BOLD, 17));
 		lblOr.setBounds(230, 201, 70, 15);
 		desktopPane_1.add(lblOr);
@@ -368,7 +368,7 @@ public class OfficerFir {
 		desktopPane_1.add(comboBox_2);
 
 		JButton btnSearch = new JButton("Search");
-		btnSearch.setForeground(Color.BLUE);
+		btnSearch.setForeground(Color.BLACK);
 		btnSearch.setBackground(Color.WHITE);
 		btnSearch.setBounds(416, 299, 117, 25);
 		desktopPane_1.add(btnSearch);

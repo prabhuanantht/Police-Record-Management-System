@@ -76,7 +76,7 @@ public class OfficerCriminal {
 		frmCriminals.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(25, 25, 112));
+		panel.setBackground(Color.BLACK);;
 		panel.setBounds(0, -105, 300, 1080);
 		frmCriminals.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -301,9 +301,9 @@ public class OfficerCriminal {
 		tabbedPane.addTab("Search Criminal", null, desktopPane_1, null);
 		
 		JLabel lblHelloUser = new JLabel("* Hello user You can search Criminals stored among the Database .");
-		lblHelloUser.setForeground(Color.GREEN);
+		lblHelloUser.setForeground(Color.WHITE);
 		lblHelloUser.setFont(new Font("Chilanka", Font.BOLD, 14));
-		lblHelloUser.setBackground(Color.GREEN);
+		lblHelloUser.setBackground(Color.WHITE);
 		lblHelloUser.setBounds(43, 78, 517, 15);
 		desktopPane_1.add(lblHelloUser);
 		
@@ -345,7 +345,7 @@ public class OfficerCriminal {
 			}
 		});
 		button.setBackground(Color.WHITE);
-		button.setForeground(Color.BLUE);
+		button.setForeground(Color.BLACK);
 		button.setBounds(434, 129, 117, 25);
 		desktopPane_1.add(button);
 
@@ -396,7 +396,7 @@ public class OfficerCriminal {
 				
 			}
 		});
-		btnNewButton.setForeground(Color.BLUE);
+		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setBackground(Color.WHITE);
 		btnNewButton.setBounds(195, 418, 117, 25);
 		desktopPane.add(btnNewButton);
