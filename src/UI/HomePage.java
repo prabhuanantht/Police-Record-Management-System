@@ -34,7 +34,7 @@ public class HomePage {
         frmCrimeInvestigationhome.getContentPane().setLayout(null);
 
         JPanel panel = new JPanel();
-        panel.setBackground(Color.BLACK);;
+        panel.setBackground(Color.BLACK);
         panel.setBounds(0, -105, 300, 1080);
         frmCrimeInvestigationhome.getContentPane().add(panel);
         panel.setLayout(null);

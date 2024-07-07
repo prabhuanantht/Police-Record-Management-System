@@ -76,7 +76,7 @@ public class OfficerCriminal {
 		frmCriminals.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.BLACK);;
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, -105, 300, 1080);
 		frmCriminals.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -377,10 +377,6 @@ public class OfficerCriminal {
 				
 				try {
 					db = new PoliceDB_Functions();
-					File dir = new File("/resources/criminals/");
-					if (!dir.exists()) {
-						dir.mkdirs(); // Create the directory if it doesn't exist
-					}
 					if(db.create_criminal(criminalID, Name, addres, City, status, Gender, wei, hei, dateA, dateR, dateB, bplace, occ, Act)) {
 						File outputfile = new File("/resources/criminals/" + criminalId.getText() + ".png");
 						ImageIO.write(bn, "jpg", outputfile);

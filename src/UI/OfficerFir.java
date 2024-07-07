@@ -57,7 +57,7 @@ public class OfficerFir {
 		frmOfficerHome.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.BLACK);;
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, -118, 300, 1080);
 		frmOfficerHome.getContentPane().add(panel);
 		panel.setLayout(null);

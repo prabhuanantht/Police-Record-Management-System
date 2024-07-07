@@ -59,7 +59,7 @@ public class NewOfficerReg {
 		frmNewOfficerRegistrstion.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(Color.BLACK);;
+		panel.setBackground(Color.BLACK);
 		panel.setBounds(0, -105, 300, 1080);
 		frmNewOfficerRegistrstion.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -241,7 +241,7 @@ public class NewOfficerReg {
 		});
 		btnSignUp.setFont(new Font("Chilanka", Font.BOLD, 13));
 		btnSignUp.setBackground(new Color(255, 255, 255));
-		btnSignUp.setBackground(Color.BLACK);;
+		btnSignUp.setBackground(Color.BLACK);
 		btnSignUp.setBounds(648, 416, 117, 25);
 		frmNewOfficerRegistrstion.getContentPane().add(btnSignUp);
 		

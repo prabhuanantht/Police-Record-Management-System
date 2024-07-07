@@ -61,7 +61,7 @@ public class StationLogin extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblNewLabel = new JLabel("Police Station Login");
-		lblNewLabel.setBackground(Color.BLACK);;
+		lblNewLabel.setBackground(Color.BLACK);
 		lblNewLabel.setBounds(227, 12, 196, 29);
 		lblNewLabel.setFont(new Font("Chilanka", Font.BOLD, 17));
 		contentPane.add(lblNewLabel);
