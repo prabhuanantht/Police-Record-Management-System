@@ -31,12 +31,12 @@ The **Police Record Management System** is a comprehensive application designed 
 
 ## Screenshots
 ![login](screens/1.png "Login")
-![officer-dashboard](screens/2.png "Officer Dashboard")
-![officer-registration](screens/3.png "Officer Registration")
-![data-entry](screens/4.png "Store Data")
-![search](screens/5.png "Search Data")
-![](screens/6.png "Criminal" )
-![](screens/7.png "Search Case")
+![homepage](screens/2.png "Officer Dashboard")
+![officer-login](screens/3.png "Officer Login")
+![officer-registration](screens/4.png "Officer Registration")
+![create-fir](screens/5.png "Create FIR")
+![add-criminal](screens/6.png "Criminal" )
+![search-cases](screens/7.png "Search Case")
 
 ## Installation
 ### Prerequisites
