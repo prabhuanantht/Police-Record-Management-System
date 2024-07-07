@@ -30,7 +30,7 @@ public class HomePage {
 
     private void initialize() {
         frmCrimeInvestigationhome = new JFrame();
-        frmCrimeInvestigationhome.getContentPane().setBackground(Color.LIGHT_GRAY);
+        frmCrimeInvestigationhome.getContentPane().setBackground(Color.DARK_GRAY);
         frmCrimeInvestigationhome.getContentPane().setLayout(null);
 
         JPanel panel = new JPanel();
@@ -120,11 +120,11 @@ public class HomePage {
         lblLogOut.setBounds(1266, 12, 70, 15);
         frmCrimeInvestigationhome.getContentPane().add(lblLogOut);
 
-        JLabel lblWelcomeUserCrime = new JLabel("Welcome! User to Police Record Management System.");
+        JLabel lblWelcomeUserCrime = new JLabel("Welcome to Police Record Management System!");
         lblWelcomeUserCrime.setBackground(new Color(60, 179, 113));
-        lblWelcomeUserCrime.setFont(new Font("Chilanka", Font.BOLD, 14));
-        lblWelcomeUserCrime.setForeground(Color.BLACK);
-        lblWelcomeUserCrime.setBounds(371, 85, 500, 33);
+        lblWelcomeUserCrime.setFont(new Font("Chilanka", Font.BOLD, 25));
+        lblWelcomeUserCrime.setForeground(Color.WHITE);
+        lblWelcomeUserCrime.setBounds(600, 120, 700, 33);
         frmCrimeInvestigationhome.getContentPane().add(lblWelcomeUserCrime);
 
         frmCrimeInvestigationhome.setTitle("Home");
@@ -133,9 +133,9 @@ public class HomePage {
 
 
         JLabel lblNewLabel_2 = new JLabel();
-        Image im = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/resources/home.png"))).getImage();
+        Image im = new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/resources/home.jpg"))).getImage();
         lblNewLabel_2.setIcon(new ImageIcon(im));
-        lblNewLabel_2.setBounds(550, 200, 500, 500);
+        lblNewLabel_2.setBounds(500, 200, 800, 450);
         assert frmCrimeInvestigationhome != null;
         frmCrimeInvestigationhome.getContentPane().add(lblNewLabel_2);
 
